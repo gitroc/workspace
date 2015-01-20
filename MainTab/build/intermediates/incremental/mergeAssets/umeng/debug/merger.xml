@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\project\saiscapp\Android\MainTab\assets"/></dataSet><dataSet config="umeng"><source path="D:\project\saiscapp\Android\MainTab\src\umeng\assets"/></dataSet><dataSet config="debug"><source path="D:\project\saiscapp\Android\MainTab\build-types\debug\assets"/></dataSet><dataSet config="umengDebug"><source path="D:\project\saiscapp\Android\MainTab\src\umengDebug\assets"/></dataSet></merger>

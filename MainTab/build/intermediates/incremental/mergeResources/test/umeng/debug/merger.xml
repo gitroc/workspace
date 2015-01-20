@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\project\saiscapp\Android\MainTab\src\androidTest\res"/><source path="D:\project\saiscapp\Android\MainTab\build\generated\res\rs\test\umeng\debug"/><source path="D:\project\saiscapp\Android\MainTab\build\generated\res\generated\test\umeng\debug"/></dataSet><dataSet config="androidTestUmeng"><source path="D:\project\saiscapp\Android\MainTab\src\androidTestUmeng\res"/></dataSet><mergedItems/></merger>

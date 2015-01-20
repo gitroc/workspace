@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\project\saiscapp\Android\MainTab\assets"/></dataSet><dataSet config="yingyongbao"><source path="D:\project\saiscapp\Android\MainTab\src\yingyongbao\assets"/></dataSet><dataSet config="release"><source path="D:\project\saiscapp\Android\MainTab\build-types\release\assets"/></dataSet><dataSet config="yingyongbaoRelease"><source path="D:\project\saiscapp\Android\MainTab\src\yingyongbaoRelease\assets"/></dataSet></merger>
