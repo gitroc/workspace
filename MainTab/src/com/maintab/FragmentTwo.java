@@ -29,7 +29,7 @@ public class FragmentTwo extends Fragment{
 		ViewGroup p = (ViewGroup) mMainView.getParent(); 
         if (p != null) { 
             p.removeAllViewsInLayout(); 
-            Log.i(TAG, "FragmentTwo-->ÒÆ³ýÒÑ´æÔÚµÄView");
+            Log.i(TAG, "FragmentTwo-->onCreateView");
         } 
 		
 		return mMainView;

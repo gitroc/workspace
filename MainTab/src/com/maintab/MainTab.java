@@ -13,80 +13,80 @@ import android.widget.TextView;
 
 /**
  * @author roc
- *	¹¦ÄÜÃèÊö£º×Ô¶¨ÒåTabHost
+ *	åŠŸèƒ½æè¿°ï¼šè‡ªå®šä¹‰TabHost
  */
 public class MainTab extends FragmentActivity{
-	
-	private static String TAG = "[MainTab]";
-		
-	//¶¨ÒåFragmentTabHost¶ÔÏó
-	private FragmentTabHost mTabHost;
-	
-	//¶¨ÒåÒ»¸ö²¼¾Ö
-	private LayoutInflater layoutInflater;
-		
-	//¶¨ÒåÊı×éÀ´´æ·ÅFragment½çÃæ
-	private Class<?> fragmentArray[] = {HomePage.class,
-										MessagePage.class,
-										FriendsPage.class,
-										SquarePage.class,
-										MorePage.class};
-	
-	//¶¨ÒåÊı×éÀ´´æ·Å°´Å¥Í¼Æ¬
-	private int mImageViewArray[] = {R.drawable.tab_home_btn,
-									 R.drawable.tab_message_btn,
-									 R.drawable.tab_selfinfo_btn,
-									 R.drawable.tab_square_btn,
-									 R.drawable.tab_more_btn};
-	//TabÑ¡Ïî¿¨µÄÎÄ×Ö
-	private String mTextviewArray[];
-	
-	public void onCreate(Bundle savedInstanceState) {
-		Log.i(TAG, "onCreate()");
+
+    private static String TAG = "[MainTab]";
+
+    //å®šä¹‰FragmentTabHostå¯¹è±¡
+    private FragmentTabHost mTabHost;
+
+    //å®šä¹‰ä¸€ä¸ªå¸ƒå±€
+    private LayoutInflater layoutInflater;
+
+    //å®šä¹‰æ•°ç»„æ¥å­˜æ”¾Fragmentç•Œé¢
+    private Class<?> fragmentArray[] = {HomePage.class,
+            MessagePage.class,
+            FriendsPage.class,
+            SquarePage.class,
+            MorePage.class};
+
+    //å®šä¹‰æ•°ç»„æ¥å­˜æ”¾æŒ‰é’®å›¾ç‰‡
+    private int mImageViewArray[] = {R.drawable.tab_home_btn,
+            R.drawable.tab_message_btn,
+            R.drawable.tab_selfinfo_btn,
+            R.drawable.tab_square_btn,
+            R.drawable.tab_more_btn};
+    //Tabé€‰é¡¹å¡çš„æ–‡å­—
+    private String mTextviewArray[];
+
+    public void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG, "onCreate()");
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main_tab_layout);
-        
+
         initView();
     }
-	 
-	/**
-	 * ³õÊ¼»¯×é¼ş
-	 */
-	private void initView(){
-		Log.i(TAG, "initView()");
-		//ÊµÀı»¯²¼¾Ö¶ÔÏó
-		layoutInflater = LayoutInflater.from(this);
-				
-		//ÊµÀı»¯TabHost¶ÔÏó£¬µÃµ½TabHost
-		mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
-		mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);	
-		mTextviewArray = getResources().getStringArray(R.array.text_view);
-		
-		for(int i = 0; i < fragmentArray.length; i++) {
-			//Log.i(TAG, "i = " + i);
-			//ÎªÃ¿Ò»¸öTab°´Å¥ÉèÖÃÍ¼±ê¡¢ÎÄ×ÖºÍÄÚÈİ
-			TabSpec tabSpec = mTabHost.newTabSpec(mTextviewArray[i]).setIndicator(getTabItemView(i));
-			//½«Tab°´Å¥Ìí¼Ó½øTabÑ¡Ïî¿¨ÖĞ
-			mTabHost.addTab(tabSpec, fragmentArray[i], null);
-			//ÉèÖÃTab°´Å¥µÄ±³¾°
-			mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.selector_tab_background);
-		}
-	}
-	
-	/**
-	 * ¸øTab°´Å¥ÉèÖÃÍ¼±êºÍÎÄ×Ö
-	 */
-	private View getTabItemView(int index){
-		//Log.i(TAG, "index = " + index);
-		View view = layoutInflater.inflate(R.layout.tab_item_view, null);
-	
-		ImageView imageView = (ImageView) view.findViewById(R.id.imageview);
-		imageView.setImageResource(mImageViewArray[index]);
-		
-		TextView textView = (TextView) view.findViewById(R.id.textview);		
-		textView.setText(mTextviewArray[index]);
-	
-		return view;
-	}
+
+    /**
+     * åˆå§‹åŒ–ç»„ä»¶
+     */
+    private void initView(){
+        Log.i(TAG, "initView()");
+        //å®ä¾‹åŒ–å¸ƒå±€å¯¹è±¡
+        layoutInflater = LayoutInflater.from(this);
+
+        //å®ä¾‹åŒ–TabHostå¯¹è±¡ï¼Œå¾—åˆ°TabHost
+        mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
+        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+        mTextviewArray = getResources().getStringArray(R.array.text_view);
+
+        for(int i = 0; i < fragmentArray.length; i++) {
+            //Log.i(TAG, "i = " + i);
+            //ä¸ºæ¯ä¸€ä¸ªTabæŒ‰é’®è®¾ç½®å›¾æ ‡ã€æ–‡å­—å’Œå†…å®¹
+            TabSpec tabSpec = mTabHost.newTabSpec(mTextviewArray[i]).setIndicator(getTabItemView(i));
+            //å°†TabæŒ‰é’®æ·»åŠ è¿›Tabé€‰é¡¹å¡ä¸­
+            mTabHost.addTab(tabSpec, fragmentArray[i], null);
+            //è®¾ç½®TabæŒ‰é’®çš„èƒŒæ™¯
+            mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.selector_tab_background);
+        }
+    }
+
+    /**
+     * ç»™TabæŒ‰é’®è®¾ç½®å›¾æ ‡å’Œæ–‡å­—
+     */
+    private View getTabItemView(int index){
+        //Log.i(TAG, "index = " + index);
+        View view = layoutInflater.inflate(R.layout.tab_item_view, null);
+
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageview);
+        imageView.setImageResource(mImageViewArray[index]);
+
+        TextView textView = (TextView) view.findViewById(R.id.textview);
+        textView.setText(mTextviewArray[index]);
+
+        return view;
+    }
 }

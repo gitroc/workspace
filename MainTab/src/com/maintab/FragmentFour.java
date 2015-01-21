@@ -29,7 +29,7 @@ public class FragmentFour extends Fragment {
 		ViewGroup p = (ViewGroup) mMainView.getParent(); 
         if (p != null) { 
             p.removeAllViewsInLayout(); 
-            Log.i(TAG, "FragmentFour-->ÒÆ³ýÒÑ´æÔÚµÄView");
+            Log.i(TAG, "FragmentFour-->onCreateView");
         } 
 		
 		return mMainView;

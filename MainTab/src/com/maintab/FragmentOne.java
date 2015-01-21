@@ -54,7 +54,7 @@ public class FragmentOne extends Fragment{
 		ViewGroup p = (ViewGroup) mMainView.getParent(); 
         if (p != null) { 
             p.removeAllViewsInLayout(); 
-            Log.i(TAG, "FragmentOne-->�Ƴ��Ѵ��ڵ�View");
+            Log.i(TAG, "FragmentOne-->onCreateView");
         } 
 		
 		return mMainView;
