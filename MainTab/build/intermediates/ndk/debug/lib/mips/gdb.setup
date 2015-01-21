@@ -1,3 +1,0 @@
-set solib-search-path D:\project\workspace\MainTab\build\intermediates\ndk\debug\obj/local/mips
-source D:/project/android-ndk-r10d/prebuilt/common/gdb/common.setup
-directory D:/project/android-ndk-r10d/platforms/android-19/arch-mips/usr/include D:\project\workspace\MainTab\src\main\jni D:\project\workspace\MainTab\build-types\debug\jni D:/project/android-ndk-r10d/sources/cxx-stl/system/include D:\project\workspace\MainTab\build\intermediates\ndk\debug" 

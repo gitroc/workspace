@@ -1,3 +1,0 @@
-set solib-search-path D:\project\saiscapp\Android\MainTab\build\intermediates\ndk\umeng\debug\obj/local/armeabi
-source D:/project/android-ndk-r10d/prebuilt/common/gdb/common.setup
-directory D:/project/android-ndk-r10d/platforms/android-19/arch-arm/usr/include D:\project\saiscapp\Android\MainTab\src\main\jni D:\project\saiscapp\Android\MainTab\src\umeng\jni D:\project\saiscapp\Android\MainTab\build-types\debug\jni D:\project\saiscapp\Android\MainTab\src\umengDebug\jni D:/project/android-ndk-r10d/sources/cxx-stl/system/include D:\project\saiscapp\Android\MainTab\build\intermediates\ndk\umeng\debug" 
