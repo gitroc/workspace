@@ -1,1 +1,1 @@
-include ':app', ':hellojni', ':MainTab', ':appjni'
+include ':common', ':example'

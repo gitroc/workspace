@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MainTab/MainTab.iml" filepath="$PROJECT_DIR$/MainTab/MainTab.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/appjni/appjni.iml" filepath="$PROJECT_DIR$/appjni/appjni.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hellojni/hellojni.iml" filepath="$PROJECT_DIR$/hellojni/hellojni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/workspace.iml" filepath="$PROJECT_DIR$/workspace.iml" />
     </modules>
   </component>

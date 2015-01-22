@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">AndroidFramework</string>
+    <string name="hit_network_failure">网络不给力，请稍候再试</string>
+    <string name="hit_no_data">获取不到数据,请稍候再试</string>
+    <string name="hit_prase_json_failure">获取的数据不正确，请稍候再试</string>
+</resources>

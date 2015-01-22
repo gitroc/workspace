@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="CaptchaView">
+		<attr name="imageURL" format="reference|string" />
+		<attr name="textSize" format="dimension" />  
+	</declare-styleable>
+</resources>
