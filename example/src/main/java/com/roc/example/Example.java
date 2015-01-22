@@ -26,18 +26,21 @@ public class Example extends FragmentActivity{
     private LayoutInflater layoutInflater;
 
     //定义数组来存放Fragment界面
-    private Class<?> fragmentArray[] = {HomePage.class,
+    private Class<?> fragmentArray[] = {
+            HomePage.class,
             MessagePage.class,
             FriendsPage.class,
             SquarePage.class,
             MorePage.class};
 
     //定义数组来存放按钮图片
-    private int mImageViewArray[] = {R.drawable.tab_home_btn,
+    private int mImageViewArray[] = {
+            R.drawable.tab_home_btn,
             R.drawable.tab_message_btn,
             R.drawable.tab_selfinfo_btn,
             R.drawable.tab_square_btn,
-            R.drawable.tab_more_btn};
+            R.drawable.tab_more_btn
+    };
     //Tab选项卡的文字
     private String mTextviewArray[];
 
