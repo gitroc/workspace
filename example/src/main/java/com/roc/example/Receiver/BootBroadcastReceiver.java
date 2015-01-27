@@ -1,8 +1,10 @@
-package com.roc.example;
+package com.roc.example.Receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+
+import com.roc.example.CoreService;
 
 public class BootBroadcastReceiver extends BroadcastReceiver {
 

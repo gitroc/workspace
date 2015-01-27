@@ -1,6 +1,5 @@
 package com.roc.example;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -21,8 +20,6 @@ public class FragmentOne extends Fragment{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		Log.i(TAG, "FragmentOne-->onCreate()");
-
-        //initService();
         addBtnClickListener();
 	}
 
@@ -74,13 +71,6 @@ public class FragmentOne extends Fragment{
 		super.onStop();
 		Log.i(TAG, "FragmentOne-->onStop()");
 	}
-
-
-    private void initService() {
-        Log.i(TAG, "initService()");
-        Intent intent = new Intent(getActivity(), CoreService.class);
-        getActivity().startService(intent);
-    }
     
     private void addBtnClickListener() {
         LayoutInflater inflater = getActivity().getLayoutInflater();
