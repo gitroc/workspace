@@ -6,10 +6,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 public class FragmentTwo extends Fragment{
 	private String TAG = "[FragmentTwo]";
 	private View mMainView;
+    private WebView mWebView;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -18,6 +20,9 @@ public class FragmentTwo extends Fragment{
 		
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		mMainView = inflater.inflate(R.layout.fragment_two, (ViewGroup)getActivity().findViewById(R.id.viewpager), false);
+
+        //mWebView = (WebView)mMainView.findViewById(R.id.webView);
+        //mWebView.loadUrl("http://www.baidu.com");
 	}
 
 	@Override

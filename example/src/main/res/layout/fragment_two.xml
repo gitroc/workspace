@@ -1,14 +1,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#00FF00"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    
-    <TextView
+    android:layout_height="fill_parent" android:weightSum="1">
+
+	
+	<TextView
         android:id="@+id/tv2"
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
         android:text="第二个fragment"
         />
+	<ViewFlipper
+		android:layout_width="match_parent"
+		android:layout_height="122dp"
+		android:id="@+id/viewFlipper" android:layout_gravity="center_horizontal"/>
+	<WebView
+		android:layout_width="fill_parent"
+		android:layout_height="345dp"
+		android:id="@+id/webView" android:layout_weight="1.80"/>
     
 </LinearLayout>
