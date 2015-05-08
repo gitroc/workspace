@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.tubb.cityindex"
+        minSdkVersion 10
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    // 签名
+    signingConfigs {
+        myConfig {
+            storeFile file("tubb.jks")
+            storePassword "123456"
+            keyAlias "tubb"
+            keyPassword "123456"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.myConfig
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        channel {
+            manifestPlaceholders = [ channel:"placeholder" ]
+        }
+    }
+    channels()
+}
+
+// 多渠道打包
+def channels() {
+    if (project.hasProperty("channel")) {
+        // 渠道号配置文件路径
+        def path = "./build-types/channels.txt"
+        file(path).eachLine { line ->
+            if(!line.startsWith("//")){ //剔除注释行
+                android.buildTypes.create(line, {
+                    manifestPlaceholders = [ channel:line ]
+                    signingConfig android.buildTypes.release.signingConfig
+                    minifyEnabled android.buildTypes.release.minifyEnabled
+                    proguardFiles android.buildTypes.release.proguardFiles
+                })
+            }
+        }
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+}
