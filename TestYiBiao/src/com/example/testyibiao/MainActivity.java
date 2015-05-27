@@ -27,6 +27,8 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	private String url = "http://pai.chexiang.com/download/app/chexiangpai.apk";
+	
+	private String upload = "http://10.32.141.12:8080/interface/taskfile.json";
 
 	byte[] imageData = null;
 	Button b;
@@ -48,7 +50,7 @@ public class MainActivity extends Activity {
 		try {
 			// ping -c 3 -w 100 中 ，-c 是指ping的次数 3是指ping 3次 ，-w 100
 			// 以秒为单位指定超时间隔，是指超时时间为100秒
-			p = Runtime.getRuntime().exec("ping -c 3 -w 5 " + str);
+			p = Runtime.getRuntime().exec("ping -c 1 -w 5 " + str);
 			int status = p.waitFor();
 			InputStream input = p.getInputStream();
 			BufferedReader in = new BufferedReader(new InputStreamReader(input));
@@ -140,6 +142,14 @@ public class MainActivity extends Activity {
 			s = Ping("www.baidu.com");
 			Log.i("ping", s);
 			return s;
+		}
+	}
+	
+	private class DownLoad extends AsyncTask<String, String, String> {
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			return null;
 		}
 	}
 
